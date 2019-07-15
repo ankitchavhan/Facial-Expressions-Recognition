@@ -34,17 +34,17 @@ After downloading data from the aforementioned sources you have to structure the
 # Prerequisites
 You need to have installed following softwares and libraries in your machine before running this project.
 
-Python 3
-Anaconda: It will install ipython notebook and most of the libraries which are needed like sklearn, pandas, seaborn, matplotlib, numpy, PIL.
-OpenCV
-keras
-Installing
-Python 3: https://www.python.org/downloads/
-Anaconda: https://www.anaconda.com/download/
-OpenCV: pip install opencv-python
-Keras: pip install keras
-Built With
-ipython-notebook - Python Text Editor
-OpenCV - It is used for processing images
-Keras - Deep Learning Library
+ 1.Python 3
+ 2.Anaconda: It will install ipython notebook and most of the libraries which are needed like sklearn, pandas, seaborn, matplotlib, numpy, PIL.
+ 3.OpenCV
+ 4.keras
+# Installing
+ 1.Python 3: https://www.python.org/downloads/
+ 2.Anaconda: https://www.anaconda.com/download/
+ 3.OpenCV: pip install opencv-python
+ 4.Keras: pip install keras
+ # Built With
+ - ipython-notebook - Python Text Editor
+ - OpenCV - It is used for processing images
+ - Keras - Deep Learning Library
 Sklearn: It is a Machine Learning library but here it is used just to calculate accuracy and confusion matrix.
