@@ -29,7 +29,7 @@ Interpretability is important for still images but not in real time. For still i
 Errors are not costly.
 
 # How to Run the Model
-After downloading data from the aforementioned sources you have to structure the data into separate folders corresponding to the seven class labels. Then you can use the code in the file "FacialExpressionRecognition.ipynb" to train the model. You can add or delete layers in MLP part of the model based on your data and results. Don't forget to save your model after each epoch. Then for real time prediction you can run the file "Real_Time_Prediction.ipynb".
+After downloading data from the aforementioned sources you have to structure the data into separate folders corresponding to the seven class labels. Then you can use the code in the file "FacialExpressionRecognition.ipynb" to train the model. You can add or delete layers in MLP part of the model based on your data and results. Don't forget to save your model after each epoch.
 
 # Prerequisites
 You need to have installed following softwares and libraries in your machine before running this project.
