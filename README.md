@@ -1,16 +1,50 @@
-# Facial-Expressions-Recognition
+# Description
+Computer animated agents and robots bring new dimension in human computer interaction which makes it vital as how computers can affect our social life in day-to-day activities. Face to face communication is a real-time process operating at a a time scale in the order of milliseconds. The level of uncertainty at this time scale is considerable, making it necessary for humans and machines to rely on sensory rich perceptual primitives rather than slow symbolic inference processes.
 
-Basically, this is the high level view of what i am going to do in making this recognition task.
+In this project we are presenting the real time facial expression recognition of seven most basic human expressions: ANGER, DISGUST, FEAR, HAPPY, NEUTRAL SAD, SURPRISE.
 
-        Input Image ----> Face Detection ----> Feature Extraction ----> Classification ----> Output
+This model can be used for prediction of expressions of both still images and real time video. However, in both the cases we have to provide image to the model. In case of real time video the image should be taken at any point in time and feed it to the model for prediction of expression. The system automatically detects face using HAAR cascade then its crops it and resize the image to a specific size and give it to the model for prediction. The model will generate seven probability values corresponding to seven expressions. The highest probability value to the corresponding expression will be the predicted expression for that image.
 
-So, in the first step i am going to take the input image using webcam and detect the face using opencv in python and try to get the features from the obtained face image using CNN concept of deep learning and for classification task, the extracted features are given to the classifier like Logistic Regression, SVM etc and classifier predicts the recognized expression as output.
+# Business Problem
+However, our goal here is to predict the human expressions, but we have trained our model on both human and animated images. Since, we had only approx 1500 human images which are very less to make a good model, so we took approximately 9000 animated images and leverage those animated images for training the model and ultimately do the prediction of expressions on human images.
 
+For better prediction we have decided to keep the size of each image 350*350.
 
-## Getting Started
+For any image our goal is to predict the expression of the face in that image out of seven basic human expression
 
-  To solve this problem, we need a large database of different faces depicting different emotions. For that, you can download the CK+ database (http://www.consortium.ri.cmu.edu/ckagree/) or you can make your own but make sure that dataset is big or diverse so you can also take help of your friends in making it diverse ….;-) or u can find another one.
-  
-Here, i am using my own database with thousand of images and organized them in a folder named dataset within there are 7 different subfolders (that are going to be your 7 classes) named anger, disgust, fear, happy, neutral, sad, surprise which contains the images of particular expression.
-To do this task, we need to find the face on each image, convert it to grayscale, crop it and save the image to the dataset. We can use a HAAR filter from OpenCV to automate face finding.
- Ref:- [http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_objdetect/py_face_detection/py_face_detection.html]
+# Problem Statement
+CLASSIFY THE EXPRESSION OF FACE IN IMAGE OUT OF SEVEN BASIC HUMAN EXPRESSION
+
+# Source Data
+We have downloaded data from 4 different sources.
+
+ - Human Images Source-1: http://www.consortium.ri.cmu.edu/ckagree/
+ - Human Images Source-2: http://app.visgraf.impa.br/database/faces/
+ - Human Images Source-3: http://www.kasrl.org/jaffe.html
+ - Animated Images Source: https://grail.cs.washington.edu/projects/deepexpr/ferg-db.html
+
+# Real-World Business Objective & Constraints
+Low-latency is required.
+Interpretability is important for still images but not in real time. For still images, probability of predicted expressions can be given.
+Errors are not costly.
+
+# How to Run the Model
+After downloading data from the aforementioned sources you have to structure the data into separate folders corresponding to the seven class labels. Then you can use the code in the file "FacialExpressionRecognition.ipynb" to train the model. You can add or delete layers in MLP part of the model based on your data and results. Don't forget to save your model after each epoch. Then for real time prediction you can run the file "Real_Time_Prediction.ipynb".
+
+# Prerequisites
+You need to have installed following softwares and libraries in your machine before running this project.
+
+Python 3
+Anaconda: It will install ipython notebook and most of the libraries which are needed like sklearn, pandas, seaborn, matplotlib, numpy, PIL.
+OpenCV
+keras
+Installing
+Python 3: https://www.python.org/downloads/
+Anaconda: https://www.anaconda.com/download/
+OpenCV: pip install opencv-python
+Keras: pip install keras
+Built With
+ipython-notebook - Python Text Editor
+OpenCV - It is used for processing images
+Keras - Deep Learning Library
+Sklearn: It is a Machine Learning library but here it is used just to calculate accuracy and confusion matrix.
